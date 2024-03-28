@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.3</version>
+		<version>3.2.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.transteven</groupId>
@@ -14,7 +14,7 @@
 	<name>multiplaylist</name>
 	<description>Using REST API, the website takes in accepted playlist links and appends them to one main playlist. </description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>21</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -24,11 +24,6 @@
         </dependency>
 		<!-- Spring-Boot -->
 		<dependency>
-			<groupId>spring</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>1.0.2</version>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
@@ -37,16 +32,30 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.16.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-										
-		   
 	<!-- google api-client -->
     <dependency>
 		<groupId>com.google.apis</groupId>
@@ -54,39 +63,6 @@
 		<version>v3-rev20210915-1.32.1</version>
 	  </dependency>
 	
-<!-- JWT-->	
-<dependency>
-	<groupId>io.jsonwebtoken</groupId>
-	<artifactId>jjwt-api</artifactId>
-	<version>0.12.3</version>
-</dependency>
-<dependency>
-	<groupId>io.jsonwebtoken</groupId>
-	<artifactId>jjwt-impl</artifactId>
-	<version>0.12.3</version>
-	<scope>runtime</scope>
-</dependency>
-<dependency>
-	<groupId>io.jsonwebtoken</groupId>
-	<artifactId>jjwt-jackson</artifactId>
-	<version>0.12.3</version>
-	<scope>runtime</scope>
-</dependency>
-<dependency>
-	<groupId>org.projectlombok</groupId>
-	<artifactId>lombok</artifactId>
-	<optional>true</optional>
-</dependency>	
-<dependency>
-	<groupId>org.mindrot</groupId>
-	<artifactId>jbcrypt</artifactId>
-	<version>0.4</version>
-</dependency>
-<dependency>
-	<groupId>com.fasterxml.jackson.core</groupId>
-	<artifactId>jackson-core</artifactId>
-	<version>2.16.1</version>
-</dependency>
 	</dependencies>
 
 	<build>

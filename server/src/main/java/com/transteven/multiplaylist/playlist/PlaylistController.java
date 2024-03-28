@@ -20,11 +20,11 @@ public class PlaylistController {
 
   private final PlaylistService playlistService;
 
+  @Autowired
   public PlaylistController(final PlaylistService playlistService) {
     this.playlistService = playlistService;
   }
 
-  @Autowired
   @PostMapping("/{userID}/create")
   public ResponseEntity<Playlist> createPlaylist(
     @PathVariable int userID,
@@ -34,7 +34,6 @@ public class PlaylistController {
     return ResponseEntity.ok(playlist);
   }
 
-  @Autowired
   @DeleteMapping("/{userID}/{playlistID}/delete")
   public ResponseEntity<String> deletePlaylist(
     @PathVariable int userID,

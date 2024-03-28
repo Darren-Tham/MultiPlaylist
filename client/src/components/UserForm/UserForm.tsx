@@ -16,15 +16,15 @@ export default function UserForm({ name, redirect }: Readonly<Props>) {
 
   return (
     <div className="grid place-content-center w-full h-full">
-      <h1 className="text-center">{name}</h1>
+      <h1 className="text-3xl">{name}</h1>
       <form onSubmit={onSubmit} className="flex flex-col">
         <label htmlFor={"email"}>Email</label>
-        <input id="email" />
+        <input className="gap-4 border-slate-500 border-[1px]" id="email" />
         <label htmlFor={"password"}>Password</label>
-        <input id="password" />
-        <input type="submit" />
+        <input className="border-slate-500 border-[1px]" id="password" />
+        <input className="border-[1px] border-slate-500" type="submit" />
       </form>
-      <p>{redirect}</p>
+      <p className="text-sky-500">{redirect}</p>
     </div>
   );
 }

@@ -6,7 +6,7 @@ import com.transteven.multiplaylist.user.dao.UserDAO;
 import com.transteven.multiplaylist.user.dto.LoginUserDTO;
 import com.transteven.multiplaylist.user.exceptions.LoginCredentialsInvalidException;
 import com.transteven.multiplaylist.user.exceptions.UserNotFoundException;
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 import org.checkerframework.checker.units.qual.A;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;

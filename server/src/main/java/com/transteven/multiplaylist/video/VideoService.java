@@ -1,7 +1,6 @@
 package com.transteven.multiplaylist.video;
 
 import com.transteven.multiplaylist.video.dao.VideoDAO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service

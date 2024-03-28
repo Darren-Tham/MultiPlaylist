@@ -32,7 +32,7 @@ public class VideoController {
     return ResponseEntity.ok(videoService.getVideoById(videoID));
   }
 
-  @PostMapping("/{userID/{playlistID}/add")
+  @PostMapping("/{userID}/{playlistID}/add")
   public ResponseEntity<Video> addVideo(
     @PathVariable int userID,
     @PathVariable int playlistID,
