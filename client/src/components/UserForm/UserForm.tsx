@@ -18,7 +18,7 @@ export default function UserForm({ name, redirect }: Readonly<Props>) {
   return (
     <div className="flex items-center justify-center w-full h-screen">
       <div className="w-4/5">
-        <Image src={logo} alt="logo" />
+        <Image src={logo} alt="logo" className="" />
         <h1 className="font-bold text-2xl mb-2">{name}</h1>
         <form onSubmit={onSubmit} className="flex gap-2 flex-col mb-3">
           <label
@@ -42,12 +42,12 @@ export default function UserForm({ name, redirect }: Readonly<Props>) {
             id="password"
           />
           <input
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transform hover:scale-[103%] transition duration-300 ease-in-out"
             type="submit"
             value={name}
           />
         </form>
-        <p className="text-center text-lg text-sky-400 hover:text-blue-800 mb-4">
+        <p className="text-center text-lg text-sky-400 hover:text-blue-800 mb-4 transform hover:scale-110 transition duration-300 ease-in-out">
           {redirect}
         </p>
       </div>
