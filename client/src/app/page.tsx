@@ -3,7 +3,7 @@
 import { useState } from "react";
 import UserForm from "../components/UserForm/UserForm";
 import Image from "next/image";
-
+import combination from "../../public/combination.png";
 export default function Landing() {
   const [hasAccount, setHasAccount] = useState(false);
   return (
@@ -17,11 +17,8 @@ export default function Landing() {
               : "Have an account? Sign in here."
           }
         />
-        <div className="min-h-screen flex justify-center items-center w-full">
-          <h1 className="text-center">
-            Mix and match your favorite videos from different websites into one
-            playlist
-          </h1>
+        <div className="hidden md:flex min-h-screen justify-center flex-col items-center w-full">
+          <Image src={combination} alt="combination" className="w-3/5" />
         </div>
       </main>
     </div>

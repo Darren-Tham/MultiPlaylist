@@ -19,15 +19,37 @@ export default function UserForm({ name, redirect }: Readonly<Props>) {
     <div className="flex items-center justify-center w-full h-screen">
       <div className="w-4/5">
         <Image src={logo} alt="logo" />
-        <h1 className="text-3xl">{name}</h1>
-        <form onSubmit={onSubmit} className="flex gap-2 flex-col">
-          <label htmlFor={"email"}>Email</label>
-          <input className="gap-4 border-slate-500 border-[1px]" id="email" />
-          <label htmlFor={"password"}>Password</label>
-          <input className="border-slate-500 border-[1px]" id="password" />
-          <input className="border-[1px] border-slate-500" type="submit" />
+        <h1 className="font-bold text-2xl mb-2">{name}</h1>
+        <form onSubmit={onSubmit} className="flex gap-2 flex-col mb-3">
+          <label
+            className="block text-gray-900 text-lg font-light"
+            htmlFor={"email"}
+          >
+            Email
+          </label>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="email"
+          />
+          <label
+            className="block text-gray-900 text-lg font-light"
+            htmlFor={"password"}
+          >
+            Password
+          </label>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="password"
+          />
+          <input
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+            value={name}
+          />
         </form>
-        <p className="text-sky-500">{redirect}</p>
+        <p className="text-center text-lg text-sky-400 hover:text-blue-800 mb-4">
+          {redirect}
+        </p>
       </div>
     </div>
   );
