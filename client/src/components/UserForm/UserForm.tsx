@@ -17,8 +17,8 @@ export default function UserForm({ name, redirect }: Readonly<Props>) {
 
   return (
     <div className="flex items-center justify-center w-full h-screen">
-      <div className="w-4/5">
-        <Image src={logo} alt="logo" className="" />
+      <div className="w-4/5 mt-2">
+        <Image src={logo} alt="logo" className="mb-2" />
         <h1 className="font-bold text-2xl mb-2">{name}</h1>
         <form onSubmit={onSubmit} className="flex gap-2 flex-col mb-3">
           <label

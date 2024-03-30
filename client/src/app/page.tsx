@@ -3,7 +3,7 @@
 import { useState } from "react";
 import UserForm from "../components/UserForm/UserForm";
 import Image from "next/image";
-import combination from "../../public/combination.png";
+import combination from "@public/combination.png";
 export default function Landing() {
   const [hasAccount, setHasAccount] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
