@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3 align="center">MultiPlaylist</h3>
+  <img src="https://raw.githubusercontent.com/Tran-Steven/MultiPlaylist/main/client/public/multilogo.png" alt="logo"/>
 
   <p align="center">
     Combine videos and playlists from different websites and have them all within one accessible playlist.
@@ -40,7 +40,6 @@
 [MultiPlaylist](https://github.com/Tran-Steven/MultiPlaylist/)
 
 MultiPlaylist is a website application that combines videos from different websites and puts them in one centralized playlist.
-
 The list of websites supported as of now are:
 
 * YouTube
@@ -65,6 +64,20 @@ Support for other websites may be added at a later point.
 - [![PostgreSQL][postgresql]][postgresql-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Preview
+
+ <div align="center"><img src="https://raw.githubusercontent.com/Tran-Steven/MultiPlaylist/main/client/public/DesktopExample.png" alt="web desktop" width="80%" height="auto"/> <h4>
+  Desktop View
+</h4> </div>
+
+ <div align="center"> 
+   <img src="https://raw.githubusercontent.com/Tran-Steven/MultiPlaylist/main/client/public/MobileExample.png" alt="web mobile" width="30%" height="30%"/>
+<h4>
+  Mobile View
+</h4>
+
+ </div>
 
 <!-- CONTRIBUTING -->
 
