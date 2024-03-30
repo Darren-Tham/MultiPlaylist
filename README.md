@@ -67,12 +67,12 @@ Support for other websites may be added at a later point.
 
 ## Preview
 
- <div align="center"><img src="https://raw.githubusercontent.com/Tran-Steven/MultiPlaylist/main/client/public/DesktopExample.png" alt="web desktop" width="80%" height="auto"/> <h4>
+ <div align="center"><img src="https://raw.githubusercontent.com/Tran-Steven/MultiPlaylist/main/DesktopExample.png" alt="web desktop" width="80%" height="auto"/> <h4>
   Desktop View
 </h4> </div>
 
  <div align="center"> 
-   <img src="https://raw.githubusercontent.com/Tran-Steven/MultiPlaylist/main/client/public/MobileExample.png" alt="web mobile" width="30%" height="30%"/>
+   <img src="https://raw.githubusercontent.com/Tran-Steven/MultiPlaylist/main/MobileExample.png" alt="web mobile" width="30%" height="30%"/>
 <h4>
   Mobile View
 </h4>
