@@ -1,11 +1,12 @@
-package com.transteven.multiplaylist.user;
+package com.transteven.multiplaylist.users;
 
 import com.google.api.services.youtube.model.Entity;
-import com.transteven.multiplaylist.user.UserRepository;
-import com.transteven.multiplaylist.user.dao.UserDAO;
-import com.transteven.multiplaylist.user.dto.LoginUserDTO;
-import com.transteven.multiplaylist.user.exceptions.LoginCredentialsInvalidException;
-import com.transteven.multiplaylist.user.exceptions.UserNotFoundException;
+import com.transteven.multiplaylist.users.UserRepository;
+import com.transteven.multiplaylist.users.dao.UserDAO;
+import com.transteven.multiplaylist.users.dto.LoginUserDTO;
+import com.transteven.multiplaylist.users.dto.UserDTO;
+import com.transteven.multiplaylist.users.exceptions.LoginCredentialsInvalidException;
+import com.transteven.multiplaylist.users.exceptions.UserNotFoundException;
 import jakarta.persistence.EntityManager;
 import org.checkerframework.checker.units.qual.A;
 import org.mindrot.jbcrypt.BCrypt;
@@ -63,5 +64,14 @@ public class UserService {
         "Email or password credential is incorrect."
       );
     }
+  }
+
+  public int addUser(final UserDTO userDTO) {
+    final String encryptedPassword = BCrypt.hashpw(
+      userDTO.password(),
+      BCrypt.gensalt()
+    );
+    User user = new User(userDTO.email(), encryptedPassword);
+    return userDAO.addUser(user);
   }
 }

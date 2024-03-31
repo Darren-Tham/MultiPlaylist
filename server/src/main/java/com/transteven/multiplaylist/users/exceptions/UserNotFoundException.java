@@ -1,4 +1,4 @@
-package com.transteven.multiplaylist.user.exceptions;
+package com.transteven.multiplaylist.users.exceptions;
 
 public class UserNotFoundException extends RuntimeException {
 

@@ -1,9 +1,10 @@
-package com.transteven.multiplaylist.user.dao;
+package com.transteven.multiplaylist.users.dao;
 
-import com.transteven.multiplaylist.user.User;
-import com.transteven.multiplaylist.user.UserRepository;
 import java.util.Optional;
 import org.springframework.stereotype.Repository;
+
+import com.transteven.multiplaylist.users.User;
+import com.transteven.multiplaylist.users.UserRepository;
 
 @Repository
 public class UserDAOJPA implements UserDAO {
@@ -25,8 +26,8 @@ public class UserDAOJPA implements UserDAO {
   }
 
   @Override
-  public void createUser(final User user) {
-    userRepository.save(user);
+  public int addUser(final User user) {
+    return userRepository.save(user).getId();
   }
 
   @Override

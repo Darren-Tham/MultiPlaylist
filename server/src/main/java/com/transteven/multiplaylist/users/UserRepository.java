@@ -1,4 +1,4 @@
-package com.transteven.multiplaylist.user;
+package com.transteven.multiplaylist.users;
 
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;

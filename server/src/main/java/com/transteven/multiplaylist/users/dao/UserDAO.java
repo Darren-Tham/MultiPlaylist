@@ -1,11 +1,12 @@
-package com.transteven.multiplaylist.user.dao;
+package com.transteven.multiplaylist.users.dao;
 
-import com.transteven.multiplaylist.user.User;
 import java.util.Optional;
+
+import com.transteven.multiplaylist.users.User;
 
 public interface UserDAO {
   boolean emailExists(String email);
   Optional<User> getUserByEmail(String email);
-  void createUser(User user);
+  int addUser(User user);
   void updateUser(User user);
 }

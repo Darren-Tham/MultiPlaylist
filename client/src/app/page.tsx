@@ -7,19 +7,20 @@ import combination from "@public/combination.png";
 export default function Landing() {
   const [hasAccount, setHasAccount] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const toggleHasAccount = () => setHasAccount((prev) => !prev);
   return (
     <>
       {isLoggedIn ? (
         <div className="">
-          <main>
-
-          </main>
+          <main></main>
         </div>
       ) : (
         <div className="min-h-screen w-full">
           <main className="flex flex-row items-center">
             <UserForm
               name={hasAccount ? "Login" : "Register"}
+              onToggleHasAccount={toggleHasAccount}
+              hasAccount={hasAccount}
               redirect={
                 hasAccount
                   ? "Don’t have an account? Register here."

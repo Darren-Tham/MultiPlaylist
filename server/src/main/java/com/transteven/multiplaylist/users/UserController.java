@@ -1,15 +1,20 @@
-package com.transteven.multiplaylist.user;
+package com.transteven.multiplaylist.users;
 
-import com.transteven.multiplaylist.user.UserService;
-import com.transteven.multiplaylist.user.dto.LoginUserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.transteven.multiplaylist.users.UserService;
+import com.transteven.multiplaylist.users.dto.LoginUserDTO;
+import com.transteven.multiplaylist.users.dto.UserDTO;
 
 @CrossOrigin
 @RestController
@@ -39,6 +44,12 @@ public class UserController {
       password
     );
     return ResponseEntity.ok(isValidPassword);
+  }
+
+  @PostMapping("/add")
+  public ResponseEntity<Integer> addUser(@RequestBody final UserDTO user) {
+    final int userID = userService.addUser(user);
+    return new ResponseEntity<>(userID, HttpStatus.CREATED);
   }
 
   @GetMapping("/login_credentials/{email}/{password}")

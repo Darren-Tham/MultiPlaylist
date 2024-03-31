@@ -1,4 +1,4 @@
-package com.transteven.multiplaylist.user;
+package com.transteven.multiplaylist.users;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,12 +9,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-
+import jakarta.persistence.Table;
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
 @Entity
+@Table(name = "app_user")
 public class User {
 
   @Id
