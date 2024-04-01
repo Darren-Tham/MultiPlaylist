@@ -1,13 +1,11 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import UserForm from "../components/UserForm/UserForm";
-import Image from "next/image";
-import combination from "@public/combination.png";
+import { useState } from "react"
+import UserForm from "../components/UserForm/UserForm"
+import Image from "next/image"
+import combination from "@public/combination.png"
 export default function Landing() {
-  const [hasAccount, setHasAccount] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const toggleHasAccount = () => setHasAccount((prev) => !prev);
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
   return (
     <>
       {isLoggedIn ? (
@@ -17,16 +15,7 @@ export default function Landing() {
       ) : (
         <div className="min-h-screen w-full">
           <main className="flex flex-row items-center">
-            <UserForm
-              name={hasAccount ? "Login" : "Register"}
-              onToggleHasAccount={toggleHasAccount}
-              hasAccount={hasAccount}
-              redirect={
-                hasAccount
-                  ? "Don’t have an account? Register here."
-                  : "Have an account? Sign in here."
-              }
-            />
+            <UserForm />
             <div className="hidden md:flex min-h-screen justify-center flex-col items-center w-full">
               <Image src={combination} alt="combination" className="w-3/5" />
             </div>
@@ -34,5 +23,5 @@ export default function Landing() {
         </div>
       )}
     </>
-  );
+  )
 }
